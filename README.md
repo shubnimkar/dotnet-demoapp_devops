@@ -61,8 +61,8 @@ Make file variables and default values, pass these in when calling `make`, e.g. 
 
 | Makefile Variable | Default                |
 | ----------------- | ---------------------- |
-| IMAGE_REG         | ghcr<span>.</span>io   |
-| IMAGE_REPO        | benc-uk/dotnet-demoapp |
+| IMAGE_REG         | docker<span>.</span>io   |
+| IMAGE_REPO        | shubnimkar/dotnet-demoapp |
 | IMAGE_TAG         | latest                 |
 | AZURE_RES_GROUP   | demoapps               |
 | AZURE_REGION      | northeurope            |
@@ -77,7 +77,7 @@ Public container image is [available on GitHub Container Registry](https://githu
 Run in a container with:
 
 ```bash
-docker run --rm -it -p 5000:5000 ghcr.io/benc-uk/dotnet-demoapp:latest
+docker run --rm -it -p 5000:5000 shubnimkar/dotnet-demoapp:latest
 ```
 
 Should you want to build your own container, use `make image` and the above variables to customise the name & tag.
