@@ -25,12 +25,6 @@ pipeline {
             }
         }
         
-        stage('Trivy FS SCan') {
-            steps {
-                sh "trivy fs ."
-            }
-        }
-        
         stage('Sonarqube Analysis') {
             steps {
                 
@@ -50,6 +44,12 @@ pipeline {
                         sh "make image"
                     }
                 }
+            }
+        }
+
+        stage('Trivy FS SCan') {
+            steps {
+                sh "trivy image -f table shubnimkar/dotnet-demoapp"
             }
         }
         
