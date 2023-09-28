@@ -66,17 +66,6 @@ Make file variables and default values, pass these in when calling `make`, e.g. 
 
 Web app will listen on the usual Kestrel port of 5000, but this can be changed by setting the `ASPNETCORE_URLS` environmental variable or with the `--urls` parameter ([see docs](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0)).
 
-# Containers
-
-Public container image is [available on GitHub Container Registry](https://github.com/users/benc-uk/packages/container/package/dotnet-demoapp).
-
-Run in a container with:
-
-```bash
-docker run --rm -it -p 5000:5000 shubnimkar/dotnet-demoapp:latest
-```
-
-Should you want to build your own container, use `make image` and the above variables to customise the name & tag.
 
 ## Kubernetes
 
