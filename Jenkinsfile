@@ -47,7 +47,7 @@ pipeline {
             }
         }
 
-        stage('Trivy FS SCan') {
+        stage('Trivy Image Scan') {
             steps {
                 sh "trivy image -f table shubnimkar/dotnet-demoapp"
             }
